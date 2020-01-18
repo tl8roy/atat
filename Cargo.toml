@@ -1,0 +1,20 @@
+[package]
+name = "atat"
+version = "0.1.0"
+authors = ["Tristan Lostroh <tl8roy@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ufmt = "0.1.0"
+atat_derive = { path = "atat_derive" , optional = true}
+nb = { version = "0.1", optional = true}
+embedded-hal = { version = "0.2", optional = true}
+
+
+[features]
+default = ["hal","derive","network"]
+derive = ["atat_derive"]
+hal = ["nb","embedded-hal"]
+network = []

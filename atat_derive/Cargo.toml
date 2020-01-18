@@ -1,0 +1,16 @@
+[package]
+name = "atat_derive"
+version = "0.1.0"
+authors = ["Tristan Lostroh <tl8roy@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ufmt = "0.1.0"
+quote = "1.0"
+syn = {version = "1.0", features = ["extra-traits","full"]}
+proc-macro2 = "1.0"
+#proc_macro_roids = "0.6"
+proc-macro-error = "0.4"
+
+[lib]
+proc-macro = true
